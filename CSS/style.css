@@ -1,0 +1,43 @@
+
+  body {
+    padding: 0; margin: 0;}
+  canvas{
+    vertical-align: top;
+      }
+
+  header{
+    position:absolute;
+    }
+    nav{
+      position:absolute;
+      }
+
+  div.parent-holder {
+    position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: -1;
+  }
+  h1{
+      font-family: 'Droid Sans', sans-serif;
+      color: white;
+      font-size:4em;
+      position: absolute;
+      bottom: 50%;
+      left:20%;
+      }
+  h2{
+      position:absolute;
+      font-family: 'Droid Serif',serif;
+      color:white;
+      font-size: 3em;
+      bottom: 45%;
+      left:20%;
+    }
+  h3{
+      position:absolute;
+      font-family: 'Droid Serif',serif;
+      color:grey;
+      font-size: 3em;
+
+    }
