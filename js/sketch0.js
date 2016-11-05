@@ -1,5 +1,5 @@
   var diamonds = [];// object array
-  var numX = 7;  //enter an integer!!for grid along X-axis
+  var numX =16;  //enter an integer!!for grid along X-axis
   var space; //spacing between
   var winRatio;
   var numY;//width/height
@@ -11,15 +11,16 @@
   var windowY;
   var name;
   var h2;// if i want to intro an element
-  var h1 = getElementsByTagName(h1);
+  var menu;
   var init;
-  var Noise = new P5.Noise(brown);//noise
+
   var yoff;
   var yoff1;
   var yincrement;
   var n;
   var n1;
   var h3;
+
 
 
   function setup() {
@@ -56,8 +57,9 @@
         };
 
       }
-    }
 
+
+    }
 
   }
   function draw() {  //if window changes size
@@ -70,6 +72,11 @@
 
     background(137,150,200);
 
+    //to adjust position of sketch in relation to navbar
+    navObj = document.getElementById("custom-bootstrap-menu");
+    navBtm = navObj.getBoundingClientRect();
+    console.log(navBtm.bottom);//bottom coords of nav bar(when false = 52)
+
 
     //noise on headers
     n = noise(yoff)*windowHeight/8;
@@ -80,12 +87,12 @@
     //noisy position of headers realised
     //color(100,100,100);
     if(windowWidth>windowHeight){
-    h3.position(windowWidth/2,windowHeight/2.0+n)
+    h3.position(windowWidth/2,windowHeight/2.0+n+navBtm.bottom)
 
     }else
-    {h3.position(windowWidth/5,windowHeight/2.6+n);
+    {h3.position(windowWidth/5,windowHeight/2.6+n+navBtm.bottom);
     }
-    h1.position(windowWidth/5,windowHeight/5+n1);
+    h1.position(windowWidth/5,windowHeight/5+n1+navBtm.bottom);
 
     noStroke();
     fill(225,150,68); //orange of sorts
